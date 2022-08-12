@@ -1,0 +1,22 @@
+{
+  "name": "white-black-dark-portfolio-website",
+  "version": "0.16.0",
+  "description": "I am creating White and black Simple dark design portfolio website",
+  "main": "main.js",
+  "scripts": {
+    "serve": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "keywords": [
+    "white-black",
+    "dark",
+    "simple",
+    "portfolio"
+  ],
+  "author": "iBOY",
+  "license": "SEE LICENCE IN licence.txt",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
