@@ -2,6 +2,7 @@
 const express = require("express") // Import Express Module
 const path = require("path") // Import Path Module
 
+// Declaring Variables For Later Use in document
 const app = express() // Using Express Function in single Variable
 const initPath = path.join(__dirname, "public") // Setting Up Initial Path for prerequisites
 const port = process.env.PORT || 1000 // Creating a Custom Variable for PORT
@@ -20,8 +21,8 @@ app.get("*", (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`=================================`);
-  console.log(`=========== PORT: ${port} ==========`);
-  console.log(`🚀 App listening on the PORT ${port}`);
-  console.log(`=================================`);
+  console.log(`=================================`)
+  console.log(`=========== PORT: ${port} ==========`)
+  console.log(`🚀 App listening on the PORT ${port}`)
+  console.log(`=================================`)
 }) // Start Server 😎

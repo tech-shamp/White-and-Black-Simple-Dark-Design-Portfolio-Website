@@ -26,6 +26,19 @@
   --sky-blue: #00101d;
   --sky-blue-accent: #264a6d;
   --gradient: linear-gradient(to bottom, #3cb0fd, #3498db);
+  --black-white: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  --white-black: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  --InnerShadow: #9e9e9e;
+  --Shadow: #ffffff80;
+  --HoverNav: #2e2e2e;
 }
 
 /* Universal Selector */
@@ -42,6 +55,8 @@ html {
 body {
   font-family: "Content";
   background: var(--background);
+  scroll-behavior: smooth;
+  transition: all 1s;
 }
 h1,
 h2,
@@ -57,28 +72,54 @@ li {
 }
 a {
   text-decoration: none;
-  background-color: #565656;
-  color: transparent;
-  text-shadow: 0px 2px 3px #ffffff80;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
 }
 
-.HeaderSection {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(img/bg.jpg);
-  background-size: cover;
-}
 .section {
   width: 100%;
+  height: 100vh;
+}
+.HeaderSection {
+  height: calc(100vh / 10rem);
   padding: 5rem 10rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("img/bg.jpg");
+  background-size: cover;
+}
+.HeaderSection .container .title {
+  color: var(--white);
+  font-size: 2.8rem;
+  text-transform: capitalize;
+
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.container {
-  width: 80%;
+.HeaderSection .container .summary {
+  width: 35%;
+  margin: 10rem 0;
+  color: var(--white);
+  line-height: 1.3rem;
+  text-transform: uppercase;
+  transition: 1s;
 }
-main {
-  height: 100vh;
+.HeaderSection .container .summary h3 {
+  text-transform: capitalize;
+  font-size: 2.2rem;
+}
+.HeaderSection .container .summary p {
+  margin: 2.8rem 0 6.8rem 0;
+  font-weight: 600;
+}
+.HeaderSection .container .summary a {
+  padding: 0.8rem 4.2rem;
+  background: var(--white);
+  color: var(--black);
+  font-family: "Content";
+  font-weight: 700;
+  border: none;
+  transition: all 0.5s;
+}
+.HeaderSection .container .summary a:hover {
+  background: var(--black);
+  color: var(--white);
 }
