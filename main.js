@@ -19,4 +19,9 @@ app.get("*", (req, res) => {
   res.status(404).sendFile(path.join(initPath, "index.html"))
 })
 
-app.listen(port, console.log(`Server Live on ${port}`)) // Launch Server
+app.listen(port, () => {
+  console.log(`=================================`);
+  console.log(`=========== PORT: ${port} ==========`);
+  console.log(`🚀 App listening on the PORT ${port}`);
+  console.log(`=================================`);
+}) // Start Server 😎

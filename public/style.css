@@ -57,42 +57,14 @@ li {
 }
 a {
   text-decoration: none;
-  color: var(--black);
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 0px 2px 3px #ffffff80;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
 
-/* Nav Styling */
-.navBar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 0 15px #000;
-  padding: 1.2rem 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--lines);
-  background: var(--separator);
-  z-index: 9;
-}
-.nav-links {
-  display: flex;
-}
-.links {
-  margin: 0 0.8rem;
-}
-.links a {
-  color: var(--lines);
-  font-size: 1.2rem;
-  font-family: "Heading";
-  font-weight: 700;
-  letter-spacing: 0.04rem;
-  transition: 0.3s;
-}
-.links a:hover,
-.links a:active {
-  cursor: pointer;
-  color: var(--black);
-}
 .HeaderSection {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(img/bg.jpg);
