@@ -4,11 +4,13 @@
   font-weight: 700;
   src: url(fonts/montserrat.woff2);
 }
+
 @font-face {
   font-family: "Heading";
   font-weight: 900;
   src: url(fonts/montserrat900.woff2);
 }
+
 @font-face {
   font-family: "Content";
   src: url(fonts/Inter-400.woff2);
@@ -26,16 +28,8 @@
   --sky-blue: #00101d;
   --sky-blue-accent: #264a6d;
   --gradient: linear-gradient(to bottom, #3cb0fd, #3498db);
-  --black-white: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(255, 255, 255, 1) 50%
-  );
-  --white-black: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(255, 255, 255, 1) 50%
-  );
+  --black-white: linear-gradient(90deg, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 1) 50%);
+  --white-black: linear-gradient(270deg, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 1) 50%);
   --InnerShadow: #9e9e9e;
   --Shadow: #ffffff80;
   --HoverNav: #2e2e2e;
@@ -52,12 +46,14 @@
 html {
   font-size: 90%;
 }
+
 body {
   font-family: "Content";
   background: var(--background);
   scroll-behavior: smooth;
   transition: all 1s;
 }
+
 h1,
 h2,
 h3,
@@ -67,9 +63,11 @@ h6 {
   font-family: "Heading";
   text-transform: uppercase;
 }
+
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -78,39 +76,13 @@ a {
   width: 100%;
   height: 100vh;
 }
-.HeaderSection {
-  height: calc(100vh / 10rem);
-  padding: 5rem 10rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("img/bg.jpg");
-  background-size: cover;
-}
-.HeaderSection .container .title {
-  color: var(--white);
-  font-size: 2.8rem;
-  text-transform: capitalize;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  padding: 5rem 10rem;
 }
-.HeaderSection .container .summary {
-  width: 35%;
-  margin: 10rem 0;
-  color: var(--white);
-  line-height: 1.3rem;
-  text-transform: uppercase;
-  transition: 1s;
-}
-.HeaderSection .container .summary h3 {
-  text-transform: capitalize;
-  font-size: 2.2rem;
-}
-.HeaderSection .container .summary p {
-  margin: 2.8rem 0 6.8rem 0;
-  font-weight: 600;
-}
-.HeaderSection .container .summary a {
+
+.btn {
+  transition: all 0.5s;
   padding: 0.8rem 4.2rem;
   background: var(--white);
   color: var(--black);
@@ -119,7 +91,134 @@ a {
   border: none;
   transition: all 0.5s;
 }
-.HeaderSection .container .summary a:hover {
+
+.btn:hover {
   background: var(--black);
   color: var(--white);
+}
+
+.header-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-section .container .title {
+  color: var(--white);
+  font-size: 2.8rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-section .container .summary {
+  width: 36rem;
+  margin: 10rem 0;
+  color: var(--white);
+  line-height: 1.3rem;
+  text-transform: uppercase;
+  transition: 1s;
+}
+
+.header-section .container .summary h3 {
+  text-transform: capitalize;
+  font-size: 2.2rem;
+}
+
+.header-section .container .summary p {
+  margin: 2.8rem 0 6.8rem 0;
+  font-weight: 600;
+}
+
+/* SHOWCASE CONTENT STYLING */
+.about-section {
+  display: flex;
+  align-items: center;
+}
+
+.about-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section .container .left-content {
+  width: 45rem;
+  color: var(--white)
+}
+
+.about-section .container .left-content h3:last-child {
+  padding: 1.8rem 0;
+  width: 20rem;
+  margin: 10rem 0;
+  color: var(--white);
+}
+
+.about-section .container .right-content p {
+  padding: 2.8rem 0;
+  line-height: 1.2rem;
+}
+
+/* RESPONSVENESS */
+@media only screen and (max-width: 1280px) {
+  .header-section .container .summary {
+    width: 36rem;
+    margin: 10rem 0;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .container {
+    padding: 2rem 4rem;
+  }
+}
+
+@media only screen and (max-width:680px) {
+  .header-section .container .summary {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  html {
+    font-size: 80%;
+  }
+
+  .header-section .container .summary {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:420px) {
+  html {
+    font-size: 70%;
+  }
+
+  .header-section .container .summary {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:360px) {
+  .container {
+    padding: .6rem 1rem;
+  }
+
+  html {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width:260px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width:220px) {
+  html {
+    font-size: 40%;
+  }
 }
