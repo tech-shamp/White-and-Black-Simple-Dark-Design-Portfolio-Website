@@ -149,7 +149,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 5px 10px 15px var(--black);
+  text-shadow: 2px 0 5px var(--black);
 }
 .header-section .container .summary {
   width: 36rem;

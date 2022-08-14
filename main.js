@@ -7,37 +7,48 @@ const app = express() // Using Express Function in single Variable
 const initPath = path.join(__dirname, 'public') // Setting Up Initial Path for prerequisites
 const port = process.env.PORT || 1000 // Creating a Custom Variable for PORT
 
+// Direct Links for Files
+const links = {
+  home: 'Home',
+  about: 'About',
+  portfolio: 'Portfolio',
+  service: 'Services',
+  contact: 'Contact',
+
+  tagLine: ' - Dark Design'
+}
+
 app.set('view engine', 'ejs');
 app.use(express.static(initPath))
 
 // Setup Website Links
 app.get('/', (req, res) => {
   res.render('index', {
-    pageTitle: 'White and Black Simple Dark Design Portfolio Website'
+    pageTitle: links.home + links.tagLine
   })
 })
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    pageTitle: 'About Us'
+    pageTitle: links.about + links.tagLine
   })
 })
 
 app.get('/portfolio', (req, res) => {
   res.render('portfolio', {
-    pageTitle: 'Portfolio'
+    pageTitle: links.portfolio + links.tagLine
   })
 })
 
 app.get('/service', (req, res) => {
   res.render('service', {
-    pageTitle: 'Services'
+    pageTitle: links.service + links.tagLine
   })
 })
 
 app.get('/contact', (req, res) => {
   res.render('contact', {
-    pageTitle: 'Contact Us'
+    pageTitle: links.contact + links.tagLine
   })
 })
 
