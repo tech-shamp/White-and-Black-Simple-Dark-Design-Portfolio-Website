@@ -18,7 +18,27 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-  res.render('about')
+  res.render('about', {
+    pageTitle: 'About Us'
+  })
+})
+
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio', {
+    pageTitle: 'Portfolio'
+  })
+})
+
+app.get('/service', (req, res) => {
+  res.render('service', {
+    pageTitle: 'Services'
+  })
+})
+
+app.get('/contact', (req, res) => {
+  res.render('contact', {
+    pageTitle: 'Contact Us'
+  })
 })
 
 // Setup 404 Page = Not Found Page
