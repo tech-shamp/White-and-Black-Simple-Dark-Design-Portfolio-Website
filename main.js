@@ -15,6 +15,10 @@ app.get("/", (req, res) => {
   res.render("index")
 })
 
+app.get("/about", (req, res) => {
+  res.render("about")
+})
+
 // Setup 404 Page = Not Found Page
 app.get("*", (req, res) => {
   res.status(404).render("index")
